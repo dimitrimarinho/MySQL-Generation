@@ -6,10 +6,10 @@ USE db_generation_game_online;
 
 -- Crie a tabela tb_classes e determine pelo menos 2 atributos, além da Chave Primária, relevantes para classificar os personagens do Game Online.
 CREATE TABLE IF NOT EXISTS tb_classes(
-idClasse bigint AUTO_INCREMENT NOT NULL,
-elementoPrincipal varchar(20),
-tipoPersonagem varchar(20) NOT NULL,
-PRIMARY KEY(idClasse)
+	idClasse bigint AUTO_INCREMENT NOT NULL,
+	elementoPrincipal varchar(20),
+	tipoPersonagem varchar(20) NOT NULL,
+	PRIMARY KEY(idClasse)
 );
 
 -- Crie a tabela tb_personagens e determine 4 atributos, além da Chave Primária, relevantes aos personagens do Game Online.
@@ -20,9 +20,9 @@ CREATE TABLE IF NOT EXISTS tb_personagens(
 	defesa int,
 	sabedoria int,
 	carisma int,
-    FK_idClasse bigint,
+	FK_idClasse bigint,
 	PRIMARY KEY(idPersonagem),
-    FOREIGN KEY (FK_idClasse) REFERENCES tb_classes(idClasse)
+	FOREIGN KEY (FK_idClasse) REFERENCES tb_classes(idClasse)
 );
 
 -- Insira 5 registros na tabela tb_classes
