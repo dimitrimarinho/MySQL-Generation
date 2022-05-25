@@ -5,23 +5,23 @@ USE db_pizzaria_legal;
 -- O sistema trabalhará com 2 tabelas tb_pizzas e tb_categorias, que deverão estar relacionadas.
 -- Crie a tabela tb_categorias e determine pelo menos 2 atributos, além da Chave Primária, relevantes para classificar as pizzas
 CREATE TABLE IF NOT EXISTS tb_categorias(
-idCategoria bigint AUTO_INCREMENT NOT NULL,
-tipo varchar(20),
-bordaRecheada varchar(40) NOT NULL,
-tamanho varchar(20) NOT NULL,
-PRIMARY KEY(idCategoria)
+	idCategoria bigint AUTO_INCREMENT NOT NULL,
+	tipo varchar(20),
+	bordaRecheada varchar(40) NOT NULL,
+	tamanho varchar(20) NOT NULL,
+	PRIMARY KEY(idCategoria)
 );
 
 -- Crie a tabela tb_pizzas e determine 4 atributos, além da Chave Primária, relevantes aos produtos da pizzaria
 CREATE TABLE IF NOT EXISTS tb_pizzas(
 	idPizza bigint AUTO_INCREMENT NOT NULL,
-    nomeSabor varchar(50) NOT NULL,
+	nomeSabor varchar(50) NOT NULL,
 	valor double NOT NULL,
-    pagamentoEfetuado boolean,
-    pronta boolean,	
-    FK_idCategoria bigint,
+	pagamentoEfetuado boolean,
+	pronta boolean,	
+	FK_idCategoria bigint,
 	PRIMARY KEY(idPizza),
-    FOREIGN KEY (FK_idCategoria) REFERENCES tb_categorias(idCategoria)
+	FOREIGN KEY (FK_idCategoria) REFERENCES tb_categorias(idCategoria)
 );
 
 -- Insira pelo menos 5 registros na tabela tb_categorias
