@@ -4,13 +4,13 @@ USE db_ecommerce_generation;
 
 -- Crie uma tabela de produtos e determine 5 atributos relevantes dos produtos
 CREATE TABLE IF NOT EXISTS produtos(
-id bigint NOT NULL AUTO_INCREMENT,
-nome varchar(200) NOT NULL, 
-quantidadeEstoque int,
-preco double NOT NULL,
-freteGratis boolean,
-cashback double,
-PRIMARY KEY(id)
+  id bigint NOT NULL AUTO_INCREMENT,
+  nome varchar(200) NOT NULL, 
+  quantidadeEstoque int,
+  preco double NOT NULL,
+  freteGratis boolean,
+  cashback double,
+  PRIMARY KEY(id)
 );
 
 -- Insira nesta tabela no mínimo 8 dados (registros)
