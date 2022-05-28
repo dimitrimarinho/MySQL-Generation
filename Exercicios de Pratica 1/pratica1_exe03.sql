@@ -4,13 +4,13 @@ USE db_EscolaGeneration;
 
 -- Crie uma tabela estudantes e utilizando a habilidade de abstração e determine 5 atributos relevantes dos estudantes para se trabalhar com o serviço dessa escola
 CREATE TABLE IF NOT EXISTS estudantes(
-id bigint NOT NULL AUTO_INCREMENT,
-nome varchar(50) NOT NULL, 
-classe varchar(50),
-mensalidade double NOT NULL,
-aprovado boolean,
-nota_mediaGeral double,
-PRIMARY KEY(id)
+  id bigint NOT NULL AUTO_INCREMENT,
+  nome varchar(50) NOT NULL, 
+  classe varchar(50),
+  mensalidade double NOT NULL,
+  aprovado boolean,
+  nota_mediaGeral double,
+  PRIMARY KEY(id)
 );
 
 -- Insira nesta tabela no mínimo 8 dados (registros)
