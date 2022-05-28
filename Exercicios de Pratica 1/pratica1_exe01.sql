@@ -4,13 +4,13 @@ USE db_generationRH;
 
 -- Crie uma tabela de colaboradores e determine 5 atributos relevantes dos colaboradores para se trabalhar com o serviço deste RH
 CREATE TABLE IF NOT EXISTS colaboradores(
-id bigint NOT NULL AUTO_INCREMENT,
-nome varchar(50) NOT NULL, 
-cargo varchar(50),
-salario double NOT NULL,
-feriasAcumuladas boolean,
-saldoFGTS double,
-PRIMARY KEY(id)
+  id bigint NOT NULL AUTO_INCREMENT,
+  nome varchar(50) NOT NULL, 
+  cargo varchar(50),
+  salario double NOT NULL,
+  feriasAcumuladas boolean,
+  saldoFGTS double,
+  PRIMARY KEY(id)
 );
 
 -- Insira nesta tabela no mínimo 5 dados (registros)
