@@ -17,11 +17,11 @@ CREATE TABLE IF NOT EXISTS tb_produtos(
 	idProduto bigint AUTO_INCREMENT NOT NULL,
 	nomeItem varchar(30) NOT NULL,
 	valor double NOT NULL,
-    laboratorio varchar(50),
-    quantidadeEstoque int NOT NULL,
+	laboratorio varchar(50),
+	quantidadeEstoque int NOT NULL,
 	FK_idCategoria bigint,
 	PRIMARY KEY (idProduto),
-    FOREIGN KEY (FK_idCategoria) REFERENCES tb_categorias(idCategoria)
+	FOREIGN KEY (FK_idCategoria) REFERENCES tb_categorias(idCategoria)
 );
 
 -- Insira 5 registros na tabela tb_categorias
